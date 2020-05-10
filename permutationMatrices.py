@@ -62,7 +62,8 @@ def areTheyPermutationMatrices(line):
         
         for matrix in range(N):
             output = 1 
-            for id in range(id_first_row, id_last_row):
+            # Make range stop at (id_last_row + 1) to loop until id_last_row
+            for id in range(id_first_row, id_last_row + 1):
                 row = line[id]
                 if not isRowCorrect(row, M):
                     output = 0
