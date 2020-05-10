@@ -46,7 +46,7 @@ for i in range(int(N)):
 #     return True
 
 def isPowerOfTwo(n):
-    return ((n & (n - 1)) == 0) and n > 0
+    return n > 0 and ((n & (n - 1)) == 0)
 
 
 def isRowDuplicate(elem, setOfElems):    
