@@ -35,16 +35,6 @@ for i in range(int(N)):
 
 # ----- FIND IF MATRICES ARE PERMUTATIONS -----
 
-# def isPowerOfTwo(n): 
-#     if (n == 0): 
-#         return False
-#     while (n != 1): 
-#             if (n % 2 != 0): 
-#                 return False
-#             n = n // 2
-              
-#     return True
-
 def isPowerOfTwo(n):
     # & = binary operator, so it considers the bin representations of n and n-1
     return n > 0 and ((n & (n - 1)) == 0)
