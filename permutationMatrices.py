@@ -45,6 +45,9 @@ def isPowerOfTwo(n):
               
     return True
 
+def isPowerOfTwo(n):
+    return ((n & (n - 1)) == 0) and n > 0
+
 
 def isRowDuplicate(elem, setOfElems):    
     if elem in setOfElems:
