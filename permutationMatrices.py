@@ -48,14 +48,18 @@ def isRowDuplicate(elem, setOfElems):
         return False
     
 def isRowCorrect(num, mat_size):
-    mat_conditions = mat_size > MAT_MIN_SIZE and mat_size < MAT_MAX_SIZE    
-    if mat_conditions and num < 2**mat_size:
-        if (num == 1 or isPowerOfTwo(num)):
-            return True
+    mat_conditions = mat_size > MAT_MIN_SIZE and mat_size < MAT_MAX_SIZE
+    try: 
+        if mat_conditions and num < 2**mat_size:
+            if (num == 1 or isPowerOfTwo(num)):
+                return True
+            else:
+                return False
         else:
-            return False
-    else:
-        return False
+            raise Exception("ERROR")
+    except ValueError:
+            print("ERROR")
+
 
 def areTheyPermutationMatrices(line):
     N = line[0]
