@@ -46,6 +46,7 @@ for i in range(int(N)):
 #     return True
 
 def isPowerOfTwo(n):
+    # & = binary operator, so it considers the bin representations of n and n-1
     return n > 0 and ((n & (n - 1)) == 0)
 
 
@@ -80,9 +81,10 @@ def areTheyPermutationMatrices(line):
         
         for matrix in range(N):
             output = 1 
-            # Make range stop at (id_last_row + 1) to loop until id_last_row
+            # Make range() stop at (id_last_row + 1) to loop until id_last_row
             for id in range(id_first_row, id_last_row + 1):
                 row = line[id]
+                # The moment a wrong row is encountered, the loop is stopped
                 if not isRowCorrect(row, M):
                     output = 0
                     break
