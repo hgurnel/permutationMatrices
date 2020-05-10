@@ -31,8 +31,6 @@ for i in range(int(N)):
             print("ERROR")
         input_list.append(elem)
 
-# print(input_list)
-
 # ----- FIND IF MATRICES ARE PERMUTATIONS -----
 
 def isPowerOfTwo(n):
@@ -46,6 +44,7 @@ def isRowDuplicate(elem, setOfElems):
     else:
         setOfElems.add(elem)         
         return False
+   
     
 def isRowCorrect(num, mat_size):
     mat_conditions = mat_size > MAT_MIN_SIZE and mat_size < MAT_MAX_SIZE
@@ -89,7 +88,7 @@ def areTheyPermutationMatrices(line):
             
             print(output)
             
-            if(matrix != N-1): 
+            if(matrix != N-1):
                 # Reset data before moving to the next matrix
                 rows_set = set()
                 M = line[id_last_row + 1]
