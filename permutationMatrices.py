@@ -7,13 +7,29 @@ MAT_MAX_SIZE = 10000
 
 # ----- USER INPUT -----  
 
-# print("Enter positive integers")
-input_list = input().split()
-
+input_list = []
+N_str = input()
 try:
-    input_list = list(map(int, input_list))
+    N = int(N_str)
 except ValueError:
     print("ERROR")
+
+input_list.append(N)
+
+for i in range(int(N)):
+    M_str = input()
+    try:
+        M = int(M_str)
+    except ValueError:
+        print("ERROR")
+    input_list.append(M)
+    for j in range(M):
+        elem_str = input()
+        try:
+            elem = int(elem_str)
+        except ValueError:
+            print("ERROR")
+        input_list.append(elem)
 
 # print(input_list)
 
@@ -36,7 +52,6 @@ def isRowDuplicate(elem, setOfElems):
     else:
         setOfElems.add(elem)         
         return False
- 
     
 def isRowCorrect(num, mat_size):
     mat_conditions = mat_size > MAT_MIN_SIZE and mat_size < MAT_MAX_SIZE    
